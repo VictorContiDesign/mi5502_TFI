@@ -120,7 +120,7 @@ def ejecutar_proceso():
     print(colored(f"El promedio general de todas las notas es de: {promedio_general}", "light_green"))
     print()
     
-    # Calculamos el promedio de cada asignatura de toda la clase
+    # Calculamos el promedio y la desviación estándar de cada asignatura de toda la clase
     promedio_general_matematicas = round(np.mean(matriz_notas[0]), 2)
     std_matematicas = round(np.std(matriz_notas[0]), 2)
     print(colored(f"El promedio general de Matemáticas es de: {promedio_general_matematicas}. Su desviación estándar es: {std_matematicas}.", "light_green"))
