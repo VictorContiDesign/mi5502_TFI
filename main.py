@@ -5,6 +5,7 @@
 # Python
 import os
 import pandas as pd
+import numpy as np
 from tkinter import filedialog
 
 # Third-Party
@@ -104,7 +105,34 @@ def ejecutar_proceso():
     
     # Mensaje de confirmación de final de proceso en consola
     print(f"El archivo de resumen de la evaluación de los estudiantes se ha guardado en: ")
-    print(colored(f"    > {GB_FILE_PATH_OUTPUT.get()}", "green"))
+    print(colored(f"    > {GB_FILE_PATH_OUTPUT.get()}", "light_green"))
+    print()
+    
+    # Creamos una matriz con un arreglo por asignatura con las notas de todos los estudiantes
+    matriz_notas = np.array([
+        df_datos["Matematicas"],
+        df_datos["Ciencias"],
+        df_datos["Lenguaje"],
+    ])
+    
+    # Calculamos el promedio general de todas las notas de la clase
+    promedio_general = round(np.mean(matriz_notas), 2)
+    print(colored(f"El promedio general de todas las notas es de: {promedio_general}", "light_green"))
+    print()
+    
+    # Calculamos el promedio de cada asignatura de toda la clase
+    promedio_general_matematicas = round(np.mean(matriz_notas[0]), 2)
+    std_matematicas = round(np.std(matriz_notas[0]), 2)
+    print(colored(f"El promedio general de Matemáticas es de: {promedio_general_matematicas}. Su desviación estándar es: {std_matematicas}.", "light_green"))
+    print()
+    promedio_general_ciencias = round(np.mean(matriz_notas[1]), 2)
+    std_ciencias = round(np.std(matriz_notas[1]), 2)
+    print(colored(f"El promedio general de Ciencias es de: {promedio_general_ciencias}. Su desviación estándar es: {std_ciencias}.", "light_green"))
+    print()
+    promedio_general_lenguaje = round(np.mean(matriz_notas[2]), 2)
+    std_lenguaje = round(np.std(matriz_notas[2]), 2)
+    print(colored(f"El promedio general de Lenguaje es de: {promedio_general_lenguaje}. Su desviación estándar es: {std_lenguaje}.", "light_green"))
+    print()
 
 def buscar_archivo_entrada():
     global GB_FILE_PATH_INPUT
