@@ -1,5 +1,5 @@
 ###########
-# MODULES #
+# MÓDULOS #
 ###########
 
 # Python
@@ -12,9 +12,9 @@ from tkinter import filedialog
 import customtkinter as ctk
 from termcolor import colored
 
-###########
-# CLASSES #
-###########
+##########
+# CLASES #
+##########
 
 class ImportarDesdeArchivo:
     def __init__(self, path_archivo):
@@ -47,7 +47,7 @@ class Estudiante:
             return "Reprobado/a"
 
 #############
-# FUNCTIONS #
+# FUNCIONES #
 #############
 
 def ejecutar_proceso():
@@ -153,9 +153,9 @@ def definir_archivo_salida():
     print("**********")
 
 
-#################
-# GLOBAL VALUES #
-#################
+######################
+# VARIABLES GLOBALES #
+######################
 
 GB_FILE_PATH_INPUT = ""
 GB_FILE_PATH_OUTPUT = ""
@@ -199,7 +199,7 @@ if __name__ == "__main__":
     GB_FILE_PATH_OUTPUT = ctk.CTkEntry(frame, width=300)
     GB_FILE_PATH_OUTPUT.pack(padx=10)
 
-    # Procesamiento masivo de archivos
+    # Procesamiento del archivo de entrada
     button_process = ctk.CTkButton(frame, text="EJECUTAR \nPROCESO", command = ejecutar_proceso)
     button_process.pack(pady=40)
     
