@@ -4,6 +4,12 @@
 
 ## Nombre Asignatura: Programación
 
+### Integrantes:
+- Victor CONTI
+- Deborah HERRERA
+- Franco MANINI
+- Julia FERNANDEZ
+
 ### Plazo de Entrega
 El plazo de entrega del trabajo será de 30 días a partir de la última 
 clase del curso (a dictarse el 29/4). Cumplido este plazo se podrá pedir prorroga, pero 
